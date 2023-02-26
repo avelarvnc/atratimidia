@@ -1,0 +1,72 @@
+:root{
+    --cor-fundo: #070707;
+    --fonte-principal: #FFF;
+    --fonte-secundaria: #0085C2;
+    --cards-inputs: #292929;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    font-family: 'Arimo', sans-serif;
+}
+
+a{
+    color: var(--fonte-principal);
+}
+
+h1{ 
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+
+#header-home{
+    padding: 10% 0 5% 2%;
+    letter-spacing: 1.5;
+    background-image: url(midia/banner-home.png);
+    background-repeat: no-repeat;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-hamburguer{
+    font-size: 2rem;
+    text-decoration: none;
+    margin: 2% 0;
+}
+
+.titulo{
+    margin: 3% 0;
+}
+
+.metade-titulo{
+    color: var(--fonte-secundaria);
+}
+
+.link-destaque{
+    font-size: 2rem;
+}
+
+.galeria-home{
+    padding: 2%;
+}
+
+.subtitulo-colorido{
+    color: var(--fonte-secundaria);
+}
