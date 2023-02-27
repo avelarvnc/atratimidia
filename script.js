@@ -14,3 +14,4 @@ function fecharMenu(){
     var x = document.getElementById("menu-navegacao");
     x.style.display = "none";
 }
+
