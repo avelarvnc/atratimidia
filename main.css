@@ -19,6 +19,7 @@ body{
 
 a{
     color: var(--fonte-principal);
+    margin: 2% 0;
 }
 
 h1{ 
@@ -26,12 +27,12 @@ h1{
 }
 
 h2{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 p{
-    font-size: 1.2rem;
     line-height: 1.5;
+    margin: 1% 0;
 }
 
 
@@ -60,7 +61,7 @@ p{
 }
 
 .link-destaque{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .galeria-home{
@@ -69,4 +70,58 @@ p{
 
 .subtitulo-colorido{
     color: var(--fonte-secundaria);
+}
+
+.galeria-home, .about-home, .contact-home{
+    padding: 5% 2%;
+}
+
+.carrossel-galeria{
+    padding: 3% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.galeria-img{
+    height: 250px;
+    width: 250px;
+    border-radius: 15px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    padding: 3% 0;
+}
+
+input, select, textarea{
+    background-color: var(--cards-inputs);
+    color: var(--fonte-principal);
+    margin: 8px 0;
+    border-radius: 7px;
+}
+
+::placeholder{
+    color: var(--fonte-principal);
+}
+
+input[type="submit"]{
+    background-color: var(--fonte-secundaria);
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 70%;
+}
+
+footer{
+    background-color: var(--cards-inputs);
+    font-size: 0.8rem;
+    padding: 3% 0;
+    text-align: center;
+}
+
+.icons-social img{
+    width: 32px;
+    height: 32px;
+    margin: 8px 16px
 }
