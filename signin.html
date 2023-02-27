@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATRATIMÍDIA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body onload="fecharMenu()">
+    <header class="header-comum">
+        <button id="botao-menu" class="menu-hamburguer" onclick="controleMenu()">☰</button>
+        <nav id="menu-navegacao" class="menu-navegacao">
+            <a href="index.html">Início</a>
+            <a href="about.html">Sobre nós</a>
+            <a href="signin.html">Cadastre-se</a>
+            <a href="#">Área restrita</a>
+            <a onclick="controleMenu()">Fechar</a>
+        </nav>
+        <img src="midia/logo-branco.svg" alt="logotipo da empresa Atratmidia" class="logo">
+    </header>
+
+    <section class="form-cadastro">
+        <h2 class="subtitulo-colorido">Sobre nós</h2>
+        <p>Utilize o formulário a seguir para cadastrar sua conta de usuário e ter acesso aos conteúdos exclusivos de nossa plataforma.</p>
+
+        <form class="formulario" action="" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome aqui">
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" placeholder="Digite seu e-mail aqui">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" name="telefone" id="id" placeholder="Digite seu telefone aqui">
+            <label for="senha">Senha:</label>
+            <input type="password" name="nome" id="nome" placeholder="Informe uma senha com ao menos 8 dígitos">
+            <label for="senhaconfirm">Confirmar senha:</label>
+            <input type="password" name="nome" id="nome" placeholder="Repita a senha digitada anteriormente">
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <footer>
+        <p>Você também pode nos encontrar nas redes sociais</p>
+        <div class="icons-social">
+            <img src="midia/instagram.png" alt="ícone do instagram">
+            <img src="midia/whatsapp.png" alt="ícone do whatsapp">
+            <img src="midia/youtube.png" alt="ícone do youtube">
+            <img src="midia/discord.png" alt="ícone do discord">
+        </div>
+        <p>Copyright © 2023. Todos os Direitos Reservados</p>
+        <p>CNPJ: 01.234.567/0001-89</p>
+    </footer>
+
+    <script src="script.js"> </script>
+   
+</body>
+</html>

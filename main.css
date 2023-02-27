@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+html{
+    height: 100%;
+}
+
 body{
     color: var(--fonte-principal);
     background-color: var(--cor-fundo);
@@ -24,10 +28,17 @@ a{
 
 h1{ 
     font-size: 2.5rem;
+
 }
 
 h2{
     font-size: 1.5rem;
+    margin: 5% 0;
+}
+
+h3{
+    font-size: 1.3rem;
+    margin: 5% 0;
 }
 
 p{
@@ -35,6 +46,24 @@ p{
     margin: 1% 0;
 }
 
+.menu-navegacao{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 9;
+    background-color: var(--cards-inputs);
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    padding: 5%;
+
+}
+
+.menu-navegacao a{
+    margin: 8% 0;
+    text-decoration: underline;
+}
 
 #header-home{
     padding: 10% 0 5% 2%;
@@ -47,9 +76,13 @@ p{
 }
 
 .menu-hamburguer{
-    font-size: 2rem;
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
     text-decoration: none;
     margin: 2% 0;
+    background-color: var(--cor-fundo);
+    color: var(--fonte-principal);
 }
 
 .titulo{
@@ -72,7 +105,7 @@ p{
     color: var(--fonte-secundaria);
 }
 
-.galeria-home, .about-home, .contact-home{
+.galeria-home, .about-home, .contact-home, .form-cadastro{
     padding: 5% 2%;
 }
 
@@ -124,4 +157,25 @@ footer{
     width: 32px;
     height: 32px;
     margin: 8px 16px
+}
+
+.header-comum{
+    padding: 10% 0 5% 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about{
+    background-image: url(midia/fundo-about.jpg);
+    padding: 5% 2%;;
+}
+
+.card-mvv1, .card-mvv2{
+    background-color: var(--cards-inputs);
+    padding: 2%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(101, 101, 101, 0.25);
+    text-align: center;
+    margin: 8% 0;
 }

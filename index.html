@@ -10,10 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
-<body>
+<body onload="fecharMenu()">
     <header id="header-home">
-        <a href="#" class="menu-hamburguer">☰</a>
-        <nav class="menu-navegacao"></nav>
+        <button id="botao-menu" class="menu-hamburguer" onclick="controleMenu()">☰</button>
+        <nav id="menu-navegacao" class="menu-navegacao">
+            <a href="index.html" onclick="fecharMenu()">Início</a>
+            <a href="about.html" onclick="fecharMenu()">Sobre nós</a>
+            <a href="signin.html" v>Cadastre-se</a>
+            <a href="#">Área restrita</a>
+            <a onclick="controleMenu()">Fechar</a>
+        </nav>
         <h1 class="titulo">ATRAT<span class="metade-titulo">MÍDIA</span></h1>
         <h2 class="slogan">Seus olhos te trazendo mais perto.</h2>
         <a href="" class="link-destaque">Clique aqui e saiba mais.</a>
@@ -77,5 +83,7 @@
         <p>Copyright © 2023. Todos os Direitos Reservados</p>
         <p>CNPJ: 01.234.567/0001-89</p>
     </footer>
+
+    <script src="script.js"> </script>
 </body>
 </html>
