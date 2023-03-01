@@ -2,6 +2,7 @@
     --cor-fundo: #070707;
     --fonte-principal: #FFF;
     --fonte-secundaria: #0085C2;
+    --hover-fundo: #009ee7;
     --cards-inputs: #292929;
 }
 
@@ -10,6 +11,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 
 html{
     height: 100%;
@@ -73,6 +83,7 @@ p{
     height: 50vh;
     display: flex;
     flex-direction: column;
+    animation: 1.2s ease-out 0s 1 slideInFromRight;
 }
 
 
@@ -100,6 +111,7 @@ p{
 
 .galeria-home{
     padding: 2%;
+    animation: 1.2s ease-out 0s 1 slideInFromRight;
 }
 
 .subtitulo-colorido{
@@ -116,6 +128,11 @@ p{
 
 .carousel-inner{
     border-radius: 15px;
+    filter: drop-shadow(0px 4px 4px rgba(101, 101, 101, 0.25));
+}
+
+.carousel-item{
+    filter: drop-shadow(0px 4px 4px rgba(101, 101, 101, 0.25));
 }
 
 .formulario{
@@ -128,9 +145,14 @@ form input, form select, form textarea{
     background-color: var(--cards-inputs);
     color: var(--fonte-principal);
     margin: 8px 0;
+    padding: 1%;
     border-radius: 7px;
     font-size: 1.2rem;
     
+}
+
+label{
+    font-size: 1.2rem;
 }
 
 ::placeholder{
@@ -141,7 +163,12 @@ input[type="submit"]{
     background-color: var(--fonte-secundaria);
     font-size: 1.2rem;
     font-weight: bold;
-    width: 70%;
+    width: 60%;
+    margin-left: auto;
+}
+
+input[type="submit"]:hover{
+    background-color: var(--hover-fundo);
 }
 
 footer{
@@ -165,13 +192,13 @@ footer{
 }
 
 .about{
-    background-image: url(midia/fundo-about.jpg);
+   /* background-image: url(midia/fundo-about.jpg); */
     padding: 5% 2%;;
 }
 
 .card-mvv1, .card-mvv2{
     background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(7,7,7,1) 38%, rgba(41,41,41,1) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(7,7,7,1) 38%, rgba(41,41,41,1) 100%);
     padding: 2%;
     border-radius: 15px;
     box-shadow: 0px 4px 4px rgba(101, 101, 101, 0.25);
@@ -179,3 +206,104 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(7,7,7,1) 38%, rgba(41
     margin: 8% 0;
 }
 
+.card-hover:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+
+@media screen and (min-width: 1280px) {
+
+    h1{ 
+        font-size: 4rem !important;
+    
+    }
+    
+    h2{
+        font-size: 2.2rem !important;
+        margin: 2% 0;
+    }
+    
+    h3{
+        font-size: 1.8rem !important;
+        margin: 2% 0;
+    }
+    
+    p{
+        line-height: 1.5;
+        margin: 2% 0;
+        font-size: 1.2rem;
+    }
+
+    a{
+        color: var(--fonte-principal);
+        margin: 2% 0;
+        font-size: 1.2rem;
+    }
+
+    button{
+        font-size: 36px !important;
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    .menu-navegacao{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 9;
+        background-color: var(--cards-inputs);
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 100%;
+        padding: 5%;
+    
+    }
+
+    .menu-navegacao a{
+        margin: 1.5% 0;
+    }
+  
+    #header-home{
+        padding: 5% 0 0% 2%;
+        letter-spacing: 1.5;
+        background-image: url(midia/banner-home.png);
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .galeria-home, .about-home, .contact-home, .form-cadastro{
+        padding: 2% 2%;
+    }
+
+    footer{
+        background-color: var(--cards-inputs);
+        font-size: 0.8rem;
+        padding: 1% 0;
+        text-align: center;
+    }
+
+    .mvv-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+    }
+    .missao-visao-valores{
+        display: flex;
+        flex-direction: column;
+    }
+
+    input[type="submit"]{
+        background-color: var(--fonte-secundaria);
+        font-size: 1.2rem;
+        font-weight: bold;
+        width: 40%;
+        margin-left: auto;
+    }
+    
+  }
