@@ -37,6 +37,11 @@ body{
 a{
     color: var(--fonte-principal);
     margin: 2% 0;
+    text-decoration: underline;
+}
+
+a:hover{
+    color: var(--hover-fundo);
 }
 
 h1{ 
@@ -59,6 +64,11 @@ p{
     margin: 2% 0;
 }
 
+button:hover {
+    background-color: var(--fonte-principal);
+    color: var(--cor-fundo);
+}
+
 .menu-navegacao{
     display: none;
     flex-direction: column;
@@ -79,6 +89,15 @@ p{
     margin: 8% 0;
     text-decoration: underline;
 }
+
+.img-logo{
+    background-image: url(midia/logo-branco.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80%;
+    height: 20vh;
+}
+
 
 #header-home{
     padding: 10% 0 5% 2%;
@@ -114,6 +133,10 @@ p{
     font-size: 1.5rem;
 }
 
+.typewrite{
+    color: var(--fonte-principal);
+}
+
 .galeria-home{
     padding: 2%;
     animation: 1.2s ease-out 0s 1 slideInFromRight;
@@ -146,14 +169,17 @@ p{
     padding: 3% 0;
 }
 
-form input, form select, form textarea{
+input,  select, textarea{
     background-color: var(--cards-inputs);
     color: var(--fonte-principal);
     margin: 8px 0;
     padding: 1%;
     border-radius: 7px;
     font-size: 1.2rem;
-    
+}
+
+input:hover, select:hover, textarea:hover{
+    box-shadow: var(--fonte-secundaria) 0px 0px 0px 2px, var(--fonte-secundaria) 0px 4px 6px -1px, var(--hover-fundo) 0px 1px 0px inset;
 }
 
 label{
@@ -166,7 +192,6 @@ label{
 
 input[type="submit"]{
     background-color: var(--fonte-secundaria);
-    font-size: 1.2rem;
     font-weight: bold;
     width: 60%;
     margin-left: auto;
@@ -197,7 +222,8 @@ footer{
 }
 
 .about{
-   /* background-image: url(midia/fundo-about.jpg); */
+   background-image: url(midia/fundo-about-mobile.png);
+   background-repeat: no-repeat;
     padding: 5% 2%;;
 }
 
@@ -214,6 +240,34 @@ footer{
 .card-hover:hover{
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
+
+.img-arredondada{
+    display: none;
+}
+
+.progress{
+    padding: 10% 2%;
+}
+
+.typing{
+    width: 100ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    animation-delay: 5s;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
 
 
 @media screen and (min-width: 1280px) {
@@ -251,6 +305,13 @@ footer{
         height: 48px !important;
     }
 
+    .img-logo{
+        background-image: url(midia/logo-branco-maior.svg);
+        background-repeat: no-repeat;
+        width: 50%;
+        height: 25vh;
+    }
+
     .menu-navegacao{
         display: none;
         flex-direction: column;
@@ -259,7 +320,7 @@ footer{
         background-color: var(--cards-inputs);
         top: 0;
         left: 0;
-        width: 40%;
+        width: 30%;
         height: 100%;
         padding: 5%;
     
@@ -291,6 +352,11 @@ footer{
         text-align: center;
     }
 
+    .about{
+        background-image: url(midia/fundo-about.png);
+         padding: 5% 2%;;
+     }
+
     .mvv-container{
         display: flex;
         flex-direction: row;
@@ -303,9 +369,31 @@ footer{
         flex-direction: column;
     }
 
-    input[type="submit"]{
+    .formulario-menor{
+        width: 60%;
+    }
+
+    .botao-menor{
         background-color: var(--fonte-secundaria);
         font-size: 1.2rem;
+        font-weight: bold;
+        width: 80%;
+        margin-left: auto;
+    }
+
+    .form-cadastro-content{
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .img-arredondada{
+        display: block;
+        border-radius: 10px;
+    }
+
+    input[type="submit"]{
+        background-color: var(--fonte-secundaria);
         font-weight: bold;
         width: 40%;
         margin-left: auto;
